@@ -78,6 +78,7 @@ class cityscapesLoader(data.Dataset):
         self.img_size = img_size if isinstance(img_size, tuple) else (img_size, img_size)
         self.mean = np.array(self.mean_rgb[version])
         self.files = {}
+        
 
         self.images_base = os.path.join(self.root, "leftImg8bit", self.split)
         self.annotations_base = os.path.join(self.root, "gtFine", self.split)
@@ -230,7 +231,8 @@ if __name__ == "__main__":
 
     augmentations = Compose([Scale(2048), RandomRotate(10), RandomHorizontallyFlip(0.5)])
 
-    local_path = "/datasets01/cityscapes/112817/"
+    local_path = "../../../dataset/"
+    print(local_path)
     dst = cityscapesLoader(local_path, is_transform=True, augmentations=augmentations)
     bs = 4
     trainloader = data.DataLoader(dst, batch_size=bs, num_workers=0)

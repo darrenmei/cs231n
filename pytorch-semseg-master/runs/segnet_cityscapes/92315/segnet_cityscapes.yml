@@ -6,12 +6,12 @@ data:
     val_split: val 
     img_rows: 512
     img_cols: 1024
-    path: /home/dmei/data/
+    path: /home/akhand/cs231n_finalproject/dataset
     sbd_path: /home/akhand/cs231n_finalproject/pytorch-semseg-master/out_imgs
 training:
     n_workers: 1
-    train_iters: 1000
-    batch_size: 3
+    train_iters: 7500
+    batch_size: 16
     val_interval: 500
     print_interval: 25
     loss:

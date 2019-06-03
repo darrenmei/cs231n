@@ -1,0 +1,193 @@
+train.py:217: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  cfg = yaml.load(fp)
+INFO:ptsemseg:Using cross_entropy with {} params
+INFO:ptsemseg:Using loss functools.partial(<function cross_entropy2d at 0x7efc8f653488>)
+RUNDIR: runs/segnet_cityscapes/80308
+Found 2975 train images
+Found 500 val images
+/opt/anaconda3/lib/python3.7/site-packages/torch/nn/_reduction.py:49: UserWarning: size_average and reduce args will be deprecated, please use reduction='mean' instead.
+  warnings.warn(warning.format(ret))
+INFO:ptsemseg:Iter [25/7500]  Loss: 2.7515  Time/Image: 1.4258
+INFO:ptsemseg:Iter [50/7500]  Loss: 2.5230  Time/Image: 1.4367
+INFO:ptsemseg:Iter [75/7500]  Loss: 2.5140  Time/Image: 1.4390
+INFO:ptsemseg:Iter [100/7500]  Loss: 2.4745  Time/Image: 1.4392
+INFO:ptsemseg:Iter [125/7500]  Loss: 2.3499  Time/Image: 1.4395
+INFO:ptsemseg:Iter [150/7500]  Loss: 2.3190  Time/Image: 1.4388
+INFO:ptsemseg:Iter [175/7500]  Loss: 2.2395  Time/Image: 1.4385
+INFO:ptsemseg:Iter [200/7500]  Loss: 2.3064  Time/Image: 1.4386
+INFO:ptsemseg:Iter [225/7500]  Loss: 2.2782  Time/Image: 1.4368
+INFO:ptsemseg:Iter [250/7500]  Loss: 2.2412  Time/Image: 1.4371
+INFO:ptsemseg:Iter [275/7500]  Loss: 2.2487  Time/Image: 1.4380
+INFO:ptsemseg:Iter [300/7500]  Loss: 2.1600  Time/Image: 1.4370
+INFO:ptsemseg:Iter [325/7500]  Loss: 2.2756  Time/Image: 1.4280
+INFO:ptsemseg:Iter [350/7500]  Loss: 2.1813  Time/Image: 1.4283
+INFO:ptsemseg:Iter [375/7500]  Loss: 2.2154  Time/Image: 1.4291
+INFO:ptsemseg:Iter [400/7500]  Loss: 2.1925  Time/Image: 1.4339
+INFO:ptsemseg:Iter [425/7500]  Loss: 2.1520  Time/Image: 1.4343
+INFO:ptsemseg:Iter [450/7500]  Loss: 2.2385  Time/Image: 1.4342
+INFO:ptsemseg:Iter [475/7500]  Loss: 2.1617  Time/Image: 1.4337
+INFO:ptsemseg:Iter [500/7500]  Loss: 2.1941  Time/Image: 1.4342
+Iter [25/7500]  Loss: 2.7515  Time/Image: 1.4258
+Iter [50/7500]  Loss: 2.5230  Time/Image: 1.4367
+Iter [75/7500]  Loss: 2.5140  Time/Image: 1.4390
+Iter [100/7500]  Loss: 2.4745  Time/Image: 1.4392
+Iter [125/7500]  Loss: 2.3499  Time/Image: 1.4395
+Iter [150/7500]  Loss: 2.3190  Time/Image: 1.4388
+Iter [175/7500]  Loss: 2.2395  Time/Image: 1.4385
+Iter [200/7500]  Loss: 2.3064  Time/Image: 1.4386
+Iter [225/7500]  Loss: 2.2782  Time/Image: 1.4368
+Iter [250/7500]  Loss: 2.2412  Time/Image: 1.4371
+Iter [275/7500]  Loss: 2.2487  Time/Image: 1.4380
+Iter [300/7500]  Loss: 2.1600  Time/Image: 1.4370
+Iter [325/7500]  Loss: 2.2756  Time/Image: 1.4280
+Iter [350/7500]  Loss: 2.1813  Time/Image: 1.4283
+Iter [375/7500]  Loss: 2.2154  Time/Image: 1.4291
+Iter [400/7500]  Loss: 2.1925  Time/Image: 1.4339
+Iter [425/7500]  Loss: 2.1520  Time/Image: 1.4343
+Iter [450/7500]  Loss: 2.2385  Time/Image: 1.4342
+Iter [475/7500]  Loss: 2.1617  Time/Image: 1.4337
+Iter [500/7500]  Loss: 2.1941  Time/Image: 1.4342
+0it [00:00, ?it/s]1it [00:02,  2.70s/it]2it [00:04,  2.37s/it]3it [00:05,  2.13s/it]4it [00:07,  1.95s/it]5it [00:08,  1.84s/it]6it [00:10,  1.76s/it]7it [00:12,  1.70s/it]8it [00:13,  1.66s/it]9it [00:15,  1.63s/it]10it [00:16,  1.60s/it]11it [00:18,  1.59s/it]12it [00:19,  1.59s/it]13it [00:21,  1.58s/it]14it [00:23,  1.57s/it]15it [00:24,  1.57s/it]16it [00:26,  1.56s/it]17it [00:27,  1.56s/it]18it [00:29,  1.56s/it]19it [00:30,  1.56s/it]20it [00:32,  1.56s/it]21it [00:33,  1.57s/it]22it [00:35,  1.57s/it]23it [00:37,  1.57s/it]24it [00:38,  1.56s/it]25it [00:40,  1.57s/it]26it [00:41,  1.57s/it]27it [00:43,  1.57s/it]28it [00:44,  1.57s/it]29it [00:46,  1.57s/it]30it [00:48,  1.57s/it]31it [00:49,  1.57s/it]32it [00:51,  1.57s/it]33it [00:52,  1.58s/it]34it [00:54,  1.57s/it]35it [00:55,  1.57s/it]36it [00:57,  1.56s/it]37it [00:59,  1.57s/it]38it [01:00,  1.56s/it]39it [01:02,  1.56s/it]40it [01:03,  1.56s/it]41it [01:05,  1.57s/it]42it [01:06,  1.57s/it]43it [01:08,  1.57s/it]44it [01:09,  1.56s/it]45it [01:11,  1.57s/it]46it [01:13,  1.57s/it]47it [01:14,  1.57s/it]48it [01:16,  1.57s/it]49it [01:17,  1.56s/it]50it [01:19,  1.55s/it]51it [01:20,  1.54s/it]52it [01:22,  1.54s/it]53it [01:23,  1.55s/it]54it [01:25,  1.55s/it]55it [01:27,  1.55s/it]56it [01:28,  1.54s/it]57it [01:30,  1.54s/it]58it [01:31,  1.54s/it]59it [01:33,  1.55s/it]60it [01:34,  1.54s/it]61it [01:36,  1.54s/it]62it [01:37,  1.54s/it]63it [01:39,  1.54s/it]64it [01:40,  1.54s/it]65it [01:42,  1.55s/it]66it [01:44,  1.55s/it]67it [01:45,  1.55s/it]68it [01:47,  1.55s/it]69it [01:48,  1.54s/it]70it [01:50,  1.55s/it]71it [01:51,  1.56s/it]72it [01:53,  1.56s/it]73it [01:54,  1.57s/it]74it [01:56,  1.56s/it]75it [01:58,  1.56s/it]76it [01:59,  1.55s/it]77it [02:01,  1.55s/it]78it [02:02,  1.55s/it]79it [02:04,  1.54s/it]80it [02:05,  1.55s/it]81it [02:07,  1.55s/it]82it [02:08,  1.55s/it]83it [02:10,  1.55s/it]84it [02:12,  1.56s/it]85it [02:13,  1.56s/it]86it [02:15,  1.55s/it]87it [02:16,  1.54s/it]88it [02:18,  1.55s/it]89it [02:19,  1.55s/it]90it [02:21,  1.55s/it]91it [02:22,  1.55s/it]92it [02:24,  1.54s/it]93it [02:25,  1.54s/it]94it [02:27,  1.53s/it]95it [02:28,  1.53s/it]96it [02:30,  1.53s/it]97it [02:32,  1.53s/it]98it [02:33,  1.53s/it]99it [02:35,  1.53s/it]100it [02:36,  1.53s/it]101it [02:38,  1.54s/it]102it [02:39,  1.53s/it]103it [02:41,  1.53s/it]104it [02:42,  1.53s/it]105it [02:44,  1.53s/it]106it [02:45,  1.53s/it]107it [02:47,  1.53s/it]108it [02:48,  1.53s/it]109it [02:50,  1.55s/it]110it [02:51,  1.55s/it]111it [02:53,  1.54s/it]112it [02:55,  1.55s/it]113it [02:56,  1.55s/it]114it [02:58,  1.55s/it]115it [02:59,  1.55s/it]116it [03:01,  1.55s/it]117it [03:02,  1.55s/it]118it [03:04,  1.55s/it]119it [03:05,  1.56s/it]120it [03:07,  1.56s/it]121it [03:09,  1.57s/it]122it [03:10,  1.56s/it]123it [03:12,  1.55s/it]124it [03:13,  1.56s/it]125it [03:15,  1.57s/it]126it [03:16,  1.57s/it]127it [03:18,  1.56s/it]128it [03:19,  1.55s/it]129it [03:21,  1.55s/it]130it [03:23,  1.55s/it]131it [03:24,  1.55s/it]132it [03:26,  1.54s/it]133it [03:27,  1.54s/it]134it [03:29,  1.54s/it]135it [03:30,  1.54s/it]136it [03:32,  1.54s/it]137it [03:33,  1.54s/it]138it [03:35,  1.54s/it]139it [03:36,  1.53s/it]140it [03:38,  1.53s/it]141it [03:39,  1.54s/it]142it [03:41,  1.53s/it]143it [03:43,  1.54s/it]144it [03:44,  1.54s/it]145it [03:46,  1.55s/it]146it [03:47,  1.54s/it]147it [03:49,  1.54s/it]148it [03:50,  1.55s/it]149it [03:52,  1.55s/it]150it [03:53,  1.54s/it]151it [03:55,  1.54s/it]152it [03:56,  1.54s/it]153it [03:58,  1.55s/it]154it [04:00,  1.55s/it]155it [04:01,  1.56s/it]156it [04:03,  1.55s/it]157it [04:04,  1.55s/it]158it [04:06,  1.55s/it]159it [04:07,  1.54s/it]160it [04:09,  1.54s/it]161it [04:10,  1.54s/it]162it [04:12,  1.54s/it]163it [04:14,  1.55s/it]164it [04:15,  1.54s/it]165it [04:17,  1.55s/it]166it [04:18,  1.54s/it]167it [04:19,  1.39s/it]WARN: resizing labels yielded fewer classes
+
+INFO:ptsemseg:Iter 500 Loss: 2.2714
+INFO:ptsemseg:Overall Acc: 	: 0.7412522973300262
+INFO:ptsemseg:Mean Acc : 	: 0.21798410694171044
+INFO:ptsemseg:FreqW Acc : 	: 0.5991592056703638
+INFO:ptsemseg:Mean IoU : 	: 0.15323977492384425
+INFO:ptsemseg:0: 0.7931495306799988
+INFO:ptsemseg:1: 0.39410236265090054
+INFO:ptsemseg:2: 0.6751489160778206
+INFO:ptsemseg:3: 0.0
+INFO:ptsemseg:4: 0.0
+INFO:ptsemseg:5: 0.0
+INFO:ptsemseg:6: 0.0
+INFO:ptsemseg:7: 0.0
+INFO:ptsemseg:8: 0.582087879073314
+INFO:ptsemseg:9: 8.381105635455429e-06
+INFO:ptsemseg:10: 0.0
+INFO:ptsemseg:11: 0.0
+INFO:ptsemseg:12: 0.0
+INFO:ptsemseg:13: 0.4670586539653719
+INFO:ptsemseg:14: 0.0
+INFO:ptsemseg:15: 0.0
+INFO:ptsemseg:16: 0.0
+INFO:ptsemseg:17: 0.0
+INFO:ptsemseg:18: 0.0
+INFO:ptsemseg:Iter [525/7500]  Loss: 2.2218  Time/Image: 1.4344
+INFO:ptsemseg:Iter [550/7500]  Loss: 2.0365  Time/Image: 1.4343
+INFO:ptsemseg:Iter [575/7500]  Loss: 2.2417  Time/Image: 1.4340
+INFO:ptsemseg:Iter [600/7500]  Loss: 2.0894  Time/Image: 1.4340
+INFO:ptsemseg:Iter [625/7500]  Loss: 2.2141  Time/Image: 1.4338
+INFO:ptsemseg:Iter [650/7500]  Loss: 2.0556  Time/Image: 1.4340
+INFO:ptsemseg:Iter [675/7500]  Loss: 2.1086  Time/Image: 1.4339
+INFO:ptsemseg:Iter [700/7500]  Loss: 2.2066  Time/Image: 1.4339
+INFO:ptsemseg:Iter [725/7500]  Loss: 2.1986  Time/Image: 1.4343
+INFO:ptsemseg:Iter [750/7500]  Loss: 2.0523  Time/Image: 1.4350
+INFO:ptsemseg:Iter [775/7500]  Loss: 2.0533  Time/Image: 1.4337
+INFO:ptsemseg:Iter [800/7500]  Loss: 1.9545  Time/Image: 1.4341
+INFO:ptsemseg:Iter [825/7500]  Loss: 2.0725  Time/Image: 1.4282
+INFO:ptsemseg:Iter [850/7500]  Loss: 2.1693  Time/Image: 1.4321
+INFO:ptsemseg:Iter [875/7500]  Loss: 2.0732  Time/Image: 1.4339
+INFO:ptsemseg:Iter [900/7500]  Loss: 1.9959  Time/Image: 1.4341
+INFO:ptsemseg:Iter [925/7500]  Loss: 2.0256  Time/Image: 1.4342
+INFO:ptsemseg:Iter [950/7500]  Loss: 1.9976  Time/Image: 1.4340
+INFO:ptsemseg:Iter [975/7500]  Loss: 2.1324  Time/Image: 1.4343
+WARN: resizing labels yielded fewer classes
+WARN: resizing labels yielded fewer classes
+WARN: resizing labels yielded fewer classes
+Overall Acc: 	 0.7412522973300262
+Mean Acc : 	 0.21798410694171044
+FreqW Acc : 	 0.5991592056703638
+Mean IoU : 	 0.15323977492384425
+Iter [525/7500]  Loss: 2.2218  Time/Image: 1.4344
+Iter [550/7500]  Loss: 2.0365  Time/Image: 1.4343
+Iter [575/7500]  Loss: 2.2417  Time/Image: 1.4340
+Iter [600/7500]  Loss: 2.0894  Time/Image: 1.4340
+Iter [625/7500]  Loss: 2.2141  Time/Image: 1.4338
+Iter [650/7500]  Loss: 2.0556  Time/Image: 1.4340
+Iter [675/7500]  Loss: 2.1086  Time/Image: 1.4339
+Iter [700/7500]  Loss: 2.2066  Time/Image: 1.4339
+Iter [725/7500]  Loss: 2.1986  Time/Image: 1.4343
+Iter [750/7500]  Loss: 2.0523  Time/Image: 1.4350
+Iter [775/7500]  Loss: 2.0533  Time/Image: 1.4337
+Iter [800/7500]  Loss: 1.9545  Time/Image: 1.4341
+Iter [825/7500]  Loss: 2.0725  Time/Image: 1.4282
+Iter [850/7500]  Loss: 2.1693  Time/Image: 1.4321
+Iter [875/7500]  Loss: 2.0732  Time/Image: 1.4339
+Iter [900/7500]  Loss: 1.9959  Time/Image: 1.4341
+Iter [925/7500]  Loss: 2.0256  Time/Image: 1.4342
+Iter [950/7500]  Loss: 1.9976  Time/Image: 1.4340
+Iter [975/7500]  Loss: 2.1324  Time/Image: 1.4343
+INFO:ptsemseg:Iter [1000/7500]  Loss: 1.9753  Time/Image: 1.4028
+Iter [1000/7500]  Loss: 1.9753  Time/Image: 1.4028
+0it [00:00, ?it/s]1it [00:02,  2.53s/it]2it [00:04,  2.24s/it]3it [00:05,  2.04s/it]4it [00:07,  1.90s/it]5it [00:08,  1.80s/it]6it [00:10,  1.73s/it]7it [00:11,  1.67s/it]8it [00:13,  1.64s/it]9it [00:15,  1.62s/it]10it [00:16,  1.61s/it]11it [00:18,  1.60s/it]12it [00:19,  1.59s/it]13it [00:21,  1.58s/it]14it [00:22,  1.57s/it]15it [00:24,  1.57s/it]16it [00:26,  1.57s/it]17it [00:27,  1.57s/it]18it [00:29,  1.56s/it]19it [00:30,  1.55s/it]20it [00:32,  1.55s/it]21it [00:33,  1.55s/it]22it [00:35,  1.54s/it]23it [00:36,  1.54s/it]24it [00:38,  1.54s/it]25it [00:39,  1.54s/it]26it [00:41,  1.53s/it]27it [00:42,  1.54s/it]28it [00:44,  1.54s/it]29it [00:46,  1.54s/it]30it [00:47,  1.53s/it]31it [00:49,  1.53s/it]32it [00:50,  1.53s/it]33it [00:52,  1.53s/it]34it [00:53,  1.53s/it]35it [00:55,  1.53s/it]36it [00:56,  1.54s/it]37it [00:58,  1.53s/it]38it [00:59,  1.53s/it]39it [01:01,  1.53s/it]40it [01:02,  1.53s/it]41it [01:04,  1.54s/it]42it [01:05,  1.54s/it]43it [01:07,  1.54s/it]44it [01:08,  1.53s/it]45it [01:10,  1.54s/it]46it [01:12,  1.54s/it]47it [01:13,  1.54s/it]48it [01:15,  1.54s/it]49it [01:16,  1.54s/it]50it [01:18,  1.54s/it]51it [01:19,  1.55s/it]52it [01:21,  1.56s/it]53it [01:22,  1.57s/it]54it [01:24,  1.58s/it]55it [01:26,  1.58s/it]56it [01:27,  1.57s/it]57it [01:29,  1.56s/it]58it [01:30,  1.55s/it]59it [01:32,  1.56s/it]60it [01:33,  1.56s/it]61it [01:35,  1.56s/it]62it [01:36,  1.55s/it]63it [01:38,  1.54s/it]64it [01:40,  1.54s/it]65it [01:41,  1.54s/it]66it [01:43,  1.55s/it]67it [01:44,  1.55s/it]68it [01:46,  1.56s/it]69it [01:47,  1.57s/it]70it [01:49,  1.57s/it]71it [01:51,  1.57s/it]72it [01:52,  1.57s/it]73it [01:54,  1.57s/it]74it [01:55,  1.56s/it]75it [01:57,  1.56s/it]76it [01:58,  1.55s/it]77it [02:00,  1.55s/it]78it [02:01,  1.54s/it]79it [02:03,  1.54s/it]80it [02:04,  1.55s/it]81it [02:06,  1.55s/it]82it [02:08,  1.55s/it]83it [02:09,  1.56s/it]84it [02:11,  1.56s/it]85it [02:12,  1.56s/it]86it [02:14,  1.55s/it]87it [02:15,  1.54s/it]88it [02:17,  1.54s/it]89it [02:18,  1.54s/it]90it [02:20,  1.53s/it]91it [02:21,  1.54s/it]92it [02:23,  1.54s/it]93it [02:25,  1.54s/it]94it [02:26,  1.53s/it]95it [02:28,  1.53s/it]96it [02:29,  1.53s/it]97it [02:31,  1.53s/it]98it [02:32,  1.54s/it]99it [02:34,  1.54s/it]100it [02:35,  1.54s/it]101it [02:37,  1.54s/it]102it [02:38,  1.54s/it]103it [02:40,  1.54s/it]104it [02:41,  1.55s/it]105it [02:43,  1.55s/it]106it [02:45,  1.56s/it]107it [02:46,  1.56s/it]108it [02:48,  1.54s/it]109it [02:49,  1.54s/it]110it [02:51,  1.54s/it]111it [02:52,  1.55s/it]112it [02:54,  1.55s/it]113it [02:55,  1.56s/it]114it [02:57,  1.56s/it]115it [02:59,  1.56s/it]116it [03:00,  1.56s/it]117it [03:02,  1.57s/it]118it [03:03,  1.58s/it]119it [03:05,  1.58s/it]120it [03:06,  1.58s/it]121it [03:08,  1.58s/it]122it [03:10,  1.57s/it]123it [03:11,  1.56s/it]124it [03:13,  1.56s/it]125it [03:14,  1.56s/it]126it [03:16,  1.55s/it]127it [03:17,  1.55s/it]128it [03:19,  1.56s/it]129it [03:20,  1.56s/it]130it [03:22,  1.55s/it]131it [03:24,  1.55s/it]132it [03:25,  1.55s/it]133it [03:27,  1.54s/it]134it [03:28,  1.55s/it]135it [03:30,  1.55s/it]136it [03:31,  1.54s/it]137it [03:33,  1.54s/it]138it [03:34,  1.54s/it]139it [03:36,  1.54s/it]140it [03:37,  1.54s/it]141it [03:39,  1.55s/it]142it [03:41,  1.55s/it]143it [03:42,  1.56s/it]144it [03:44,  1.56s/it]145it [03:45,  1.56s/it]146it [03:47,  1.56s/it]147it [03:48,  1.56s/it]148it [03:50,  1.55s/it]149it [03:51,  1.55s/it]150it [03:53,  1.56s/it]151it [03:55,  1.55s/it]152it [03:56,  1.55s/it]153it [03:58,  1.55s/it]154it [03:59,  1.55s/it]155it [04:01,  1.54s/it]156it [04:02,  1.55s/it]157it [04:04,  1.55s/it]158it [04:05,  1.55s/it]159it [04:07,  1.55s/it]160it [04:08,  1.55s/it]161it [04:10,  1.55s/it]162it [04:12,  1.55s/it]163it [04:13,  1.55s/it]164it [04:15,  1.55s/it]165it [04:16,  1.55s/it]166it [04:18,  1.55s/it]167it [04:19,  1.39s/it]WARN: resizing labels yielded fewer classes
+
+INFO:ptsemseg:Iter 1000 Loss: 1.9505
+INFO:ptsemseg:Overall Acc: 	: 0.8337979232866385
+INFO:ptsemseg:Mean Acc : 	: 0.28440495998435567
+INFO:ptsemseg:FreqW Acc : 	: 0.7298429734676386
+INFO:ptsemseg:Mean IoU : 	: 0.22617646934516553
+INFO:ptsemseg:0: 0.9205515201013197
+INFO:ptsemseg:1: 0.5299383776985016
+INFO:ptsemseg:2: 0.7562838453428116
+INFO:ptsemseg:3: 8.32092623796066e-06
+INFO:ptsemseg:4: 0.00045190264089384696
+INFO:ptsemseg:5: 0.0
+INFO:ptsemseg:6: 0.0
+INFO:ptsemseg:7: 0.0
+INFO:ptsemseg:8: 0.7802635966856327
+INFO:ptsemseg:9: 0.24113833044659216
+INFO:ptsemseg:10: 0.5693208144800949
+INFO:ptsemseg:11: 0.0
+INFO:ptsemseg:12: 0.0
+INFO:ptsemseg:13: 0.4993962092360599
+INFO:ptsemseg:14: 0.0
+INFO:ptsemseg:15: 0.0
+INFO:ptsemseg:16: 0.0
+INFO:ptsemseg:17: 0.0
+INFO:ptsemseg:18: 0.0
+INFO:ptsemseg:Iter [1025/7500]  Loss: 1.9576  Time/Image: 1.4361
+INFO:ptsemseg:Iter [1050/7500]  Loss: 1.9549  Time/Image: 1.4341
+INFO:ptsemseg:Iter [1075/7500]  Loss: 2.1166  Time/Image: 1.4338
+INFO:ptsemseg:Iter [1100/7500]  Loss: 1.9084  Time/Image: 1.4338
+INFO:ptsemseg:Iter [1125/7500]  Loss: 1.8971  Time/Image: 1.4340
+INFO:ptsemseg:Iter [1150/7500]  Loss: 1.9663  Time/Image: 1.4338
+INFO:ptsemseg:Iter [1175/7500]  Loss: 1.8921  Time/Image: 1.4343
+INFO:ptsemseg:Iter [1200/7500]  Loss: 1.8913  Time/Image: 1.4352
+INFO:ptsemseg:Iter [1225/7500]  Loss: 1.9791  Time/Image: 1.4342
+INFO:ptsemseg:Iter [1250/7500]  Loss: 1.8487  Time/Image: 1.4341
+INFO:ptsemseg:Iter [1275/7500]  Loss: 1.9460  Time/Image: 1.4342
+INFO:ptsemseg:Iter [1300/7500]  Loss: 1.8694  Time/Image: 1.4343
+INFO:ptsemseg:Iter [1325/7500]  Loss: 1.8628  Time/Image: 1.4360
+INFO:ptsemseg:Iter [1350/7500]  Loss: 1.8712  Time/Image: 1.4345
+INFO:ptsemseg:Iter [1375/7500]  Loss: 1.9625  Time/Image: 1.4339
+INFO:ptsemseg:Iter [1400/7500]  Loss: 1.8251  Time/Image: 1.4285
+INFO:ptsemseg:Iter [1425/7500]  Loss: 1.9612  Time/Image: 1.4299
+INFO:ptsemseg:Iter [1450/7500]  Loss: 1.7937  Time/Image: 1.4316
+INFO:ptsemseg:Iter [1475/7500]  Loss: 1.7935  Time/Image: 1.4303
+INFO:ptsemseg:Iter [1500/7500]  Loss: 1.7682  Time/Image: 1.4396
+Overall Acc: 	 0.8337979232866385
+Mean Acc : 	 0.28440495998435567
+FreqW Acc : 	 0.7298429734676386
+Mean IoU : 	 0.22617646934516553
+Iter [1025/7500]  Loss: 1.9576  Time/Image: 1.4361
+Iter [1050/7500]  Loss: 1.9549  Time/Image: 1.4341
+Iter [1075/7500]  Loss: 2.1166  Time/Image: 1.4338
+Iter [1100/7500]  Loss: 1.9084  Time/Image: 1.4338
+Iter [1125/7500]  Loss: 1.8971  Time/Image: 1.4340
+Iter [1150/7500]  Loss: 1.9663  Time/Image: 1.4338
+Iter [1175/7500]  Loss: 1.8921  Time/Image: 1.4343
+Iter [1200/7500]  Loss: 1.8913  Time/Image: 1.4352
+Iter [1225/7500]  Loss: 1.9791  Time/Image: 1.4342
+Iter [1250/7500]  Loss: 1.8487  Time/Image: 1.4341
+Iter [1275/7500]  Loss: 1.9460  Time/Image: 1.4342
+Iter [1300/7500]  Loss: 1.8694  Time/Image: 1.4343
+Iter [1325/7500]  Loss: 1.8628  Time/Image: 1.4360
+Iter [1350/7500]  Loss: 1.8712  Time/Image: 1.4345
+Iter [1375/7500]  Loss: 1.9625  Time/Image: 1.4339
+Iter [1400/7500]  Loss: 1.8251  Time/Image: 1.4285
+Iter [1425/7500]  Loss: 1.9612  Time/Image: 1.4299
+Iter [1450/7500]  Loss: 1.7937  Time/Image: 1.4316
+Iter [1475/7500]  Loss: 1.7935  Time/Image: 1.4303
+Iter [1500/7500]  Loss: 1.7682  Time/Image: 1.4396
+0it [00:00, ?it/s]1it [00:02,  2.61s/it]2it [00:04,  2.29s/it]3it [00:05,  2.08s/it]4it [00:07,  1.92s/it]5it [00:08,  1.81s/it]6it [00:10,  1.73s/it]7it [00:11,  1.67s/it]8it [00:13,  1.64s/it]9it [00:15,  1.62s/it]10it [00:16,  1.61s/it]11it [00:18,  1.61s/it]12it [00:19,  1.59s/it]13it [00:21,  1.59s/it]14it [00:22,  1.59s/it]15it [00:24,  1.58s/it]16it [00:26,  1.57s/it]17it [00:27,  1.56s/it]18it [00:29,  1.55s/it]19it [00:30,  1.55s/it]20it [00:32,  1.55s/it]21it [00:33,  1.56s/it]22it [00:35,  1.56s/it]23it [00:36,  1.56s/it]24it [00:38,  1.56s/it]25it [00:40,  1.56s/it]26it [00:41,  1.56s/it]27it [00:43,  1.56s/it]28it [00:44,  1.55s/it]29it [00:46,  1.55s/it]30it [00:47,  1.55s/it]31it [00:49,  1.56s/it]32it [00:50,  1.56s/it]33it [00:52,  1.56s/it]34it [00:54,  1.55s/it]35it [00:55,  1.56s/it]36it [00:57,  1.56s/it]37it [00:58,  1.56s/it]38it [01:00,  1.57s/it]39it [01:01,  1.58s/it]40it [01:03,  1.57s/it]41it [01:05,  1.57s/it]42it [01:06,  1.57s/it]43it [01:08,  1.57s/it]44it [01:09,  1.57s/it]45it [01:11,  1.57s/it]46it [01:12,  1.57s/it]47it [01:14,  1.57s/it]48it [01:16,  1.57s/it]49it [01:17,  1.56s/it]50it [01:19,  1.56s/it]51it [01:20,  1.56s/it]52it [01:22,  1.56s/it]53it [01:23,  1.55s/it]54it [01:25,  1.56s/it]55it [01:26,  1.56s/it]56it [01:28,  1.56s/it]57it [01:30,  1.55s/it]
