@@ -9,6 +9,8 @@ from PIL import Image
 from scipy.io import loadmat
 from torch.autograd import Variable
 from torchvision import transforms
+import matplotlib.colors
+import matplotlib.cm
 
 import deeplab
 from pascal import VOCSegmentation
@@ -56,14 +58,15 @@ args = parser.parse_args()
 def main():
   assert torch.cuda.is_available()
   torch.backends.cudnn.benchmark = True
-  model_fname = 'data/deeplab_{0}_{1}_v3_{2}_epoch%d.pth'.format(
-      args.backbone, args.dataset, args.exp)
+  #model_fname = 'data/deeplab_{0}_{1}_v3_{2}_epoch%d.pth'.format(
+      #args.backbone, args.dataset, args.exp)
+  model_fname = 'deeplab_{0}_{1}_v3_{2}_epoch%d.pth'.format(args.backbone, args.dataset, args.exp)
   if args.dataset == 'pascal':
     dataset = VOCSegmentation('data/VOCdevkit',
         train=args.train, crop_size=args.crop_size)
   elif args.dataset == 'cityscapes':
-    dataset = Cityscapes('data/cityscapes',
-        train=args.train, crop_size=args.crop_size)
+    #dataset = Cityscapes('/home/darrenmei/cs231n_finalproject', train=args.train, crop_size=args.crop_size)
+    dataset = Cityscapes('/home/darrenmei/cs231n_finalproject', train=True, crop_size=args.crop_size)
   else:
     raise ValueError('Unknown dataset: {}'.format(args.dataset))
   if args.backbone == 'resnet101':
@@ -142,12 +145,13 @@ def main():
               'loss: {loss.val:.4f} ({loss.ema:.4f})'.format(
               epoch + 1, i + 1, len(dataset_loader), lr, loss=losses))
 
-      if epoch % 10 == 9:
+      if epoch % 5 == 4:
         torch.save({
           'epoch': epoch + 1,
           'state_dict': model.state_dict(),
           'optimizer': optimizer.state_dict(),
           }, model_fname % (epoch + 1))
+      #torch.save({'epoch': epoch + 1, 'state_dict': model.state_dict(), 'optimizer': optimizer.state_dict()}, model_fname % (epoch + 1))
 
   else:
     torch.cuda.set_device(args.gpu)
@@ -156,7 +160,10 @@ def main():
     checkpoint = torch.load(model_fname % args.epochs)
     state_dict = {k[7:]: v for k, v in checkpoint['state_dict'].items() if 'tracked' not in k}
     model.load_state_dict(state_dict)
-    cmap = loadmat('data/pascal_seg_colormap.mat')['colormap']
+    cmap = loadmat('DeepLabv3/data/pascal_seg_colormap.mat')['colormap']
+    #norm = matplotlib.colors.Normalize(vmin=3, vmax=100)
+    #cmap = matplotlib.cm.plasma
+    #cmap = matplotlib.cm.ScalarMappable(norm=norm, cmap=cmap)
     cmap = (cmap * 255).astype(np.uint8).flatten().tolist()
 
     inter_meter = AverageMeter()
@@ -169,11 +176,13 @@ def main():
       pred = pred.data.cpu().numpy().squeeze().astype(np.uint8)
       mask = target.numpy().astype(np.uint8)
       imname = dataset.masks[i].split('/')[-1]
+      directory_name = imname.split('_')[0]
+      #print(directory_name)
       mask_pred = Image.fromarray(pred)
       mask_pred.putpalette(cmap)
-      mask_pred.save(os.path.join('data/val', imname))
+      mask_pred.save(os.path.join('data/train', imname))
+      #mask_pred.save(os.path.join('gtFine/val/', imname))
       print('eval: {0}/{1}'.format(i + 1, len(dataset)))
-
       inter, union = inter_and_union(pred, mask, len(dataset.CLASSES))
       inter_meter.update(inter)
       union_meter.update(union)

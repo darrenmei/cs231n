@@ -54,14 +54,20 @@ class ASPP(nn.Module):
         self.aspp4 = conv(C, depth, kernel_size=3, stride=1,
                                dilation=int(18*mult), padding=int(18*mult),
                                bias=False)
+        self.aspp6 = conv(C, depth, kernel_size=3, stride=1,
+                               dilation=int(24*mult), padding=int(24*mult),
+                               bias=False)
         self.aspp5 = conv(C, depth, kernel_size=1, stride=1, bias=False)
         self.aspp1_bn = norm(depth, momentum)
         self.aspp2_bn = norm(depth, momentum)
         self.aspp3_bn = norm(depth, momentum)
         self.aspp4_bn = norm(depth, momentum)
+        self.aspp6_bn = norm(depth, momentum)
         self.aspp5_bn = norm(depth, momentum)
-        self.conv2 = conv(depth * 5, depth, kernel_size=1, stride=1,
-                               bias=False)
+        #self.conv2 = conv(depth * 5, depth, kernel_size=1, stride=1,
+                               #bias=False)
+        self.conv2 = conv(depth * 6, depth, kernel_size=1, stride=1,
+                                bias=False)
         self.bn2 = norm(depth, momentum)
         self.conv3 = nn.Conv2d(depth, num_classes, kernel_size=1, stride=1)
 
@@ -78,13 +84,19 @@ class ASPP(nn.Module):
         x4 = self.aspp4(x)
         x4 = self.aspp4_bn(x4)
         x4 = self.relu(x4)
+        x6 = self.aspp6(x)
+        x6 = self.aspp6_bn(x6)
+        x6 = self.relu(x6)
         x5 = self.global_pooling(x)
         x5 = self.aspp5(x5)
         x5 = self.aspp5_bn(x5)
         x5 = self.relu(x5)
         x5 = nn.Upsample((x.shape[2], x.shape[3]), mode='bilinear',
                          align_corners=True)(x5)
-        x = torch.cat((x1, x2, x3, x4, x5), 1)
+
+        x = torch.cat((x1, x2, x3, x4, x6, x5), 1)
+        #x = torch.cat((x1, x2, x3, x4, x5), 1)
+        #print(x.shape)
         x = self.conv2(x)
         x = self.bn2(x)
         x = self.relu(x)
@@ -156,6 +168,8 @@ class ResNet(nn.Module):
         self.layer3 = self._make_layer(block, 256, layers[2], stride=2)
         self.layer4 = self._make_layer(block, 512, layers[3], stride=1,
                                        dilation=2)
+        #self.layer5 = self._make_layer(block, 1024, layers[4], stride=1, dilation=2)
+
         self.aspp = ASPP(512 * block.expansion, 256, num_classes, conv=self.conv, norm=self.norm)
 
         for m in self.modules():
@@ -194,6 +208,7 @@ class ResNet(nn.Module):
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
+        #x = self.layer5(x)
 
         x = self.aspp(x)
         x = nn.Upsample(size, mode='bilinear', align_corners=True)(x)
@@ -219,6 +234,7 @@ def resnet101(pretrained=False, num_groups=None, weight_std=False, **kwargs):
         pretrained (bool): If True, returns a model pre-trained on ImageNet
     """
     model = ResNet(Bottleneck, [3, 4, 23, 3], num_groups=num_groups, weight_std=weight_std, **kwargs)
+    #model = ResNet(Bottleneck, [3, 4, 23, 3, 1], num_groups=num_groups, weight_std=weight_std, **kwargs)
     if pretrained:
         model_dict = model.state_dict()
         if num_groups and weight_std:
